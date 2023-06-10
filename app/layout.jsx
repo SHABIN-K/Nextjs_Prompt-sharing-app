@@ -1,22 +1,22 @@
 import "@styles/globals.css";
-import { Children } from "react";
 
 export const metadata = {
-  title: "promptvilla",
+  title: "Promptvilla",
   description: "Discover & Share Ai Prompts",
 };
 
-const RootLayout = () => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
         <div className="main">
           <div className="gradient"/>
         </div>
-        <main className="app">{Children}</main>
+        <main className="app">{children}</main>
       </body>
     </html>
   );
 };
 
 export default RootLayout;
+
