@@ -1,3 +1,4 @@
+import User from "@models/user";
 import { connectToDB } from "@utils/database";
 
 import NextAuth from "next-auth";
@@ -15,9 +16,17 @@ const handler = NextAuth({
     try {
       await connectToDB();
       //chec if a user already exits
-
+      const userExits = await User.findOne({
+        email: profile.email,
+      });
       //if not, create a new user
-
+      if (!userExits) {
+        await User.create({
+          email: profile.email,
+          username: profile.name.replace(" ", "").toLowerCase(),
+          Image: profile.picture,
+        });
+      }
       return true;
     } catch (error) {
       console.log(error);
