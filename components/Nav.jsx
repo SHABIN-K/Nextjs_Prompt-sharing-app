@@ -35,7 +35,6 @@ const Nav = () => {
         <p className="logo_text">Promptopia</p>
       </Link>
 
-
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
@@ -45,7 +44,6 @@ const Nav = () => {
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
             </button>
-
             <Link href="/profile">
               <Image
                 src={session?.user.image}

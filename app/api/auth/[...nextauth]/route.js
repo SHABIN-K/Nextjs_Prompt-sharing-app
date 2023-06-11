@@ -16,13 +16,10 @@ const handler = NextAuth({
       const sessionUser = await User.findOne({
         email: session.user.email,
       });
-
       session.user.id = sessionUser._id.toString();
-
       return session;
     },
     async signIn({ profile }) {
-        console.log(profile);
       try {
         await connectToDB();
         //chec if a user already exits
@@ -38,9 +35,8 @@ const handler = NextAuth({
           });
           console.log("user added");
         } else {
-            console.log("user already exits");
+          console.log("user already exits");
         }
-
         return true;
       } catch (error) {
         console.log(error);
