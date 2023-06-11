@@ -35,6 +35,7 @@ const handler = NextAuth({
           Image: profile.picture,
         });
       }
+      console.log("user added");
       return true;
     } catch (error) {
       console.log(error);
