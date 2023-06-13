@@ -36,7 +36,6 @@ const CreatePrompt = () => {
       setSubmitting(false);
     }
   };
-
   return (
     <Form
       type="Create"
