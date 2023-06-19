@@ -5,8 +5,8 @@ const Loading = () => {
     <div className='w-full flex-center'>
       <Image
         src='assets/icons/loader.svg'
-        width={50}
-        height={50}
+        width={80}
+        height={80}
         alt='loader'
         className='object-contain'
       />

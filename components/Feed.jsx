@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import PromptCard from "./PromptCard";
+import Loading from "@utils/Loading";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -20,14 +21,17 @@ const PromptCardList = ({ data, handleTagClick }) => {
 const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(null);
 
   const handleSearchChange = (e) => {};
 
   useEffect(() => {
     const fetchPosts = async () => {
+      setLoading(true);
       const response = await fetch("/api/prompt");
       const data = await response.json();
       setPosts(data);
+      setLoading(false);
     };
     fetchPosts();
   }, []);
@@ -44,7 +48,11 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={posts} handleTagClick={() => {}} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <PromptCardList data={posts} handleTagClick={() => {}} />
+      )}
     </section>
   );
 };

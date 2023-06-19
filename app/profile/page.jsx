@@ -5,18 +5,22 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import Profile from "@components/Profile";
+import Loading from "@utils/Loading";
 
 const MyProfile = () => {
   const router = useRouter();
   const { data: session } = useSession();
 
   const [myPosts, setMyPosts] = useState([]);
+  const [loading, setLoading] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
+      setLoading(true);
       const response = await fetch(`/api/users/${session?.user.id}/posts`);
       const data = await response.json();
       setMyPosts(data);
+      setLoading(false);
     };
     if (session?.user.id) fetchPosts();
   }, []);
@@ -41,13 +45,19 @@ const MyProfile = () => {
     }
   };
   return (
-    <Profile
-      name="My"
-      desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
-      data={myPosts}
-      handleEdit={handleEdit}
-      handleDelete={handleDelete}
-    />
+    <div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Profile
+          name="My"
+          desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
+          data={myPosts}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}
+        />
+      )}
+    </div>
   );
 };
 
