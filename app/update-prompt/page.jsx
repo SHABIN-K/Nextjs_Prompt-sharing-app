@@ -30,16 +30,17 @@ const UpdatePrompt = () => {
     if (promptId) getPromptDetails();
   }, [promptId]);
 
-  const createPrompt = async (e) => {
+  const EditPrompt = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 
+    if (!promptId) return alert("prompt ID not found try again");
+
     try {
-      const response = await fetch("/api/prompt/new", {
-        method: "POST",
+      const response = await fetch(`api/prompt/${promptId}`, {
+        method: "PATCH",
         body: JSON.stringify({
           prompt: post.prompt,
-          userId: session?.user.id,
           tag: post.tag,
         }),
       });
@@ -58,7 +59,7 @@ const UpdatePrompt = () => {
       post={post}
       setPost={setPatchPost}
       submitting={submitting}
-      handleSubmit={() => {}}
+      handleSubmit={EditPrompt}
     />
   );
 };
