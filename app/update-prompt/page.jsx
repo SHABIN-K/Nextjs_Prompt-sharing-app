@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
 
-const EditPrompt = () => {
+const UpdatePrompt = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const promptId = searchParams.get("id");
@@ -18,8 +18,8 @@ const EditPrompt = () => {
 
   useEffect(() => {
     const getPromptDetails = async () => {
-      const response = await fetch(`/api/prompt/${promptId}`,{
-        method: "GET"
+      const response = await fetch(`/api/prompt/${promptId}`, {
+        method: "GET",
       });
       const data = await response.json();
       setPatchPost({
@@ -30,37 +30,37 @@ const EditPrompt = () => {
     if (promptId) getPromptDetails();
   }, [promptId]);
 
-  //const createPrompt = async (e) => {
-  //  e.preventDefault();
-  //  setSubmitting(true);
-//
-  //  try {
-  //    const response = await fetch("/api/prompt/new", {
-  //      method: "POST",
-  //      body: JSON.stringify({
-  //        prompt: post.prompt,
-  //        userId: session?.user.id,
-  //        tag: post.tag,
-  //      }),
-  //    });
-  //    if (response.ok) {
-  //      router.push("/");
-  //    }
-  //  } catch (error) {
-  //    console.log(error);
-  //  } finally {
-  //    setSubmitting(false);
-  //  }
-  //};
+  const createPrompt = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("/api/prompt/new", {
+        method: "POST",
+        body: JSON.stringify({
+          prompt: post.prompt,
+          userId: session?.user.id,
+          tag: post.tag,
+        }),
+      });
+      if (response.ok) {
+        router.push("/");
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
   return (
     <Form
       type="Edit"
       post={post}
       setPost={setPatchPost}
       submitting={submitting}
-      handleSubmit={()=>{}}
+      handleSubmit={() => {}}
     />
   );
 };
 
-export default EditPrompt;
+export default UpdatePrompt;
