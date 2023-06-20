@@ -4,10 +4,14 @@ With all advanced Social Media features, such as Google Authentication, create, 
 
 ## Tech Stack
   
-**Client:** NEXT.JS,TailwindCss,mongodb,Nextauth
+**Client:** 
+   :-NEXT.JS
+   :-TailwindCss
+   :-mongodb
+   :-Nextauth
 
 <hr/>
-<img src="/public/assets/images/github-des-img.png">
+![github-des-img](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)
 
 
 ## Environment Variables
