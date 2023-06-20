@@ -1,6 +1,6 @@
 # Prompt-sharing-App
 
-With all advanced Social Media features, such as Google Authentication, create, edit, delete and save posts, like and comment on other people's posts, search and filter images and much more
+With advanced social media features including Google authentication, create, edit, delete, and displaying on other people's profiles, search and filter data, and much more.
 
 ## Tech Stack
    * NEXT.JS
