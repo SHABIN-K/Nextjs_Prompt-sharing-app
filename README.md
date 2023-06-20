@@ -9,7 +9,7 @@ With all advanced Social Media features, such as Google Authentication, create, 
    * Nextauth
 
 <hr/>
-<img src="[https://user-images.githubusercontent.com/73272797/233392854-eaccd32d-2db2-4fa6-bae5-96266609d150.png](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)">
+<img src="https://user-images.githubusercontent.com/73272797/233392854-eaccd32d-2db2-4fa6-bae5-96266609d150.png">
 
 ## Environment Variables
 
