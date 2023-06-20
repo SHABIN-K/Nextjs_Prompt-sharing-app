@@ -1,6 +1,17 @@
 import Link from "next/link";
+import { useState } from "react";
+import { TagsInput } from "react-tag-input-component";
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
+  const [tag, setTags] = useState(["coding"]);
+  
+  const handleTagInput = (newTags) => {
+    setTags(newTags);
+    setPost({ ...post, tag: newTags.map(tag => tag.text) });
+    console.log("ddd::",setPost);
+  }
+  
+  console.log("createtag:",post);
   return (
     <section className="w-full max-w-full flex-start flex-col">
       <h1 className="head_text text-left">
@@ -35,14 +46,12 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag{` `}
-            <span className="font-normal">
-              (product,webdevelopment,idea)
-            </span>
+            <span className="font-normal">{` `}#product,webdevelopment,idea</span>
           </span>
-
-          <input
-            value={post.tag}
-            onChange={(e) => setPost({ ...post, tag: e.target.value })}
+          <TagsInput
+            value={tag}
+            onChange={handleTagInput}
+            name="tags"
             placeholder="#tag"
             required
             className="form_input"

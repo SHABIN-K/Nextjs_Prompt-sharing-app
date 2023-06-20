@@ -26,6 +26,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       router.push(`/profile/${userId}?name=${post.creator.username}`);
     }
   };
+  //console.log(post);
 
   return (
     <div className="prompt_card">
