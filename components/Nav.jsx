@@ -34,8 +34,7 @@ const Nav = () => {
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-      <p className="font-satoshi font-semibold text-lg text-black tracking-wide md:hidden">Promptopia</p>
-
+      
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
