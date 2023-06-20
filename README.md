@@ -3,15 +3,13 @@
 With all advanced Social Media features, such as Google Authentication, create, edit, delete and save posts, like and comment on other people's posts, search and filter images and much more
 
 ## Tech Stack
-  
-**Client:** 
-   :-NEXT.JS
-   :-TailwindCss
-   :-mongodb
-   :-Nextauth
+   * NEXT.JS
+   * TailwindCss
+   * mongodb
+   * Nextauth
 
 <hr/>
-![github-des-img](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)
+[github-des-img](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)
 
 
 ## Environment Variables
