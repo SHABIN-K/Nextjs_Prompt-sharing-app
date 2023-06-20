@@ -9,17 +9,16 @@ With all advanced Social Media features, such as Google Authentication, create, 
    * Nextauth
 
 <hr/>
-[github-des-img](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)
-
+<img src="[https://user-images.githubusercontent.com/73272797/233392854-eaccd32d-2db2-4fa6-bae5-96266609d150.png](https://github.com/SHABIN-K/Prompt_sharing/assets/73272797/04890f4a-28af-46e6-9523-e32b060d7f20)">
 
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
 **Client:**
-* `GOOGLE_CLIENT_ID` Google Client id (https://console.cloud.google.com/)
-* `GOOGLE_CLIENT_SECRET ` Google Client secret (https://console.cloud.google.com/)
-* `MONGODB_URI ` your Mongodb url (https://www.mongodb.com/)
+* `GOOGLE_CLIENT_ID` Google Client [id](https://console.cloud.google.com/)
+* `GOOGLE_CLIENT_SECRET ` Google Client [secret](https://console.cloud.google.com/)
+* `MONGODB_URI ` your Mongodb [url](https://www.mongodb.com/)
 * `NEXTAUTH_URL ` [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
 * `NEXTAUTH_URL_INTERNAL`  [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
 * `NEXTAUTH_SECRET `  [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
