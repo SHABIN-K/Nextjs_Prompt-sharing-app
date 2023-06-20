@@ -26,7 +26,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       router.push(`/profile/${userId}?name=${post.creator.username}`);
     }
   };
-  //console.log(post);
 
   return (
     <div className="prompt_card">
@@ -69,12 +68,19 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
       <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
 
-      <p
-        className="font-inner text-sm blue_gradient cursor-pointer"
-        onClick={() => handleTagClick && handleTagClick(post.tag)}
-      >
-        #{post.tag}
-      </p>
+      <div className="flex flex-wrap">
+        {post.tag.map((tag) => {
+          return (
+            <p
+              key={tag}
+              className="font-inner text-sm blue_gradient cursor-pointer mr-1"
+              onClick={() => handleTagClick && handleTagClick(tag)}
+            >
+              #{tag}
+            </p>
+          );
+        })}
+      </div>
 
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
