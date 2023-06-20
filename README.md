@@ -18,9 +18,9 @@ To run this project, you will need to add the following environment variables to
 * `GOOGLE_CLIENT_ID` Google Client id (https://console.cloud.google.com/)
 * `GOOGLE_CLIENT_SECRET ` Google Client secret (https://console.cloud.google.com/)
 * `MONGODB_URI ` your Mongodb url (https://www.mongodb.com/)
-* `NEXTAUTH_URL ` [help] (https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
-* `NEXTAUTH_URL_INTERNAL`  [help] (https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
-* `NEXTAUTH_SECRET `  [help] (https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
+* `NEXTAUTH_URL ` [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
+* `NEXTAUTH_URL_INTERNAL`  [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
+* `NEXTAUTH_SECRET `  [help](https://github.com/SHABIN-K/Prompt_sharing/blob/main/.env.sample)
  
 ## Run Locally
 
