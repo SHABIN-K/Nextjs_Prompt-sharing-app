@@ -7,7 +7,7 @@ import { useSession, signIn, signOut, getProviders } from "next-auth/react";
 
 const Nav = () => {
   const { data: session } = useSession();
-  const isUserLoggedIn = session?.user
+  const isUserLoggedIn = session?.user;
 
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -34,7 +34,7 @@ const Nav = () => {
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-      
+
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">

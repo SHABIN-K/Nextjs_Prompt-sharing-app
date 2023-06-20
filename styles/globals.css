@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .main {
   width: 100vw;
   min-height: 100vh;

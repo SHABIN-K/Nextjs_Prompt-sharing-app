@@ -13,7 +13,7 @@ const UpdatePrompt = () => {
   const [submitting, setSubmitting] = useState(false);
   const [post, setPatchPost] = useState({
     prompt: "",
-    tag: "",
+    tag: [],
   });
 
   useEffect(() => {

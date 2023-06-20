@@ -10,7 +10,7 @@ export const POST = async (req) => {
       prompt,
       tag: tag.map((tagItem) => tagItem.text), // Extract the 'text' values from the 'tag' array
     });
-    
+
     await newPrompt.save();
     return new Response(JSON.stringify(newPrompt), { status: 201 });
   } catch (error) {
