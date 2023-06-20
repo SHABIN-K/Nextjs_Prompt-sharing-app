@@ -7,7 +7,7 @@ With all advanced Social Media features, such as Google Authentication, create, 
 **Client:** NEXT.JS,TailwindCss,mongodb,Nextauth
 
 <hr/>
-<img src="/assets/images/github-des-img.png">
+<img src="/public/assets/images/github-des-img.png">
 
 
 ## Environment Variables
