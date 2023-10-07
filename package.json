@@ -15,7 +15,7 @@
     "mongoose": "^7.3.3",
     "next": "13.4.1",
     "next-auth": "^4.22.1",
-    "postcss": "8.4.23",
+    "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-tag-input-component": "^2.0.2",
